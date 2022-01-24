@@ -1,29 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styling/global.css" />
-    <title>Ghost Recon: Breakpoint | Plot</title>
-  </head>
-  <nav>
-    <ul>
-      <li><a href="/plot">Plot</a></li>
-      <li><a href="/">Home</a></li>
-      <li><a href="/development">Development</a></li>
-    </ul>
-  </nav>
-  <body>
+﻿<%@ Page Title="Ghost Recon: Breakpoint | Plot" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="plot.aspx.cs" Inherits="plot" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div>
-      <div style="height: 100%; border: 1px solid gray; border-radius: 0.25rem">
-        <p style="padding: 1em; overflow: hidden; text-align: justify">
-          <img
-            src="/images/water.png"
-            style="float: left; margin-bottom: 1em; border-radius: 0.25rem"
-            width="100%"
-          />
-          Prior to the events of the game, Skell Technology comes under
+        <div style="height: 100%; border: 1px solid gray; border-radius: 0.25rem">
+            <p style="padding: 1em; overflow: hidden; text-align: justify">
+                <img
+                    src="/images/water.png"
+                    style="float: left; margin-bottom: 1em; border-radius: 0.25rem"
+                    width="100%" />
+                Prior to the events of the game, Skell Technology comes under
           increasing public scrutiny when they are faced with mounting evidence
           that its products are being used by corrupt regimes. The situation
           escalates further when the USS Seay, an American cargo ship, sinks off
@@ -89,8 +76,7 @@
           Auroa is not finished. Skell observes the drone swarm above Auroa
           acting strangely, commenting that the hacked pylon appears to have
           developed emergent behavior.
-        </p>
-      </div>
+            </p>
+        </div>
     </div>
-  </body>
-</html>
+</asp:Content>

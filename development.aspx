@@ -1,29 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styling/global.css" />
-    <title>Ghost Recon: Breakpoint | Development</title>
-  </head>
-  <nav>
-    <ul>
-      <li><a href="/plot">Plot</a></li>
-      <li><a href="/">Home</a></li>
-      <li><a href="/development">Development</a></li>
-    </ul>
-  </nav>
-  <body>
+﻿<%@ Page Title="Ghost Recon: Breakpoint | Development" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="development.aspx.cs" Inherits="development" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div>
-      <div style="height: 100%; border: 1px solid gray; border-radius: 0.25rem">
-        <p style="padding: 1em; overflow: hidden; text-align: justify">
-          <img
-            src="/images/snow.png"
-            style="float: left; margin-bottom: 1em; border-radius: 0.25rem"
-            width="100%"
-          />
-          Following the success of <i>Wildlands</i>, the development team
+        <div style="height: 100%; border: 1px solid gray; border-radius: 0.25rem">
+            <p style="padding: 1em; overflow: hidden; text-align: justify">
+                <img
+                    src="/images/snow.png"
+                    style="float: left; margin-bottom: 1em; border-radius: 0.25rem"
+                    width="100%" />
+                Following the success of <i>Wildlands</i>, the development team
           expanded to more than one thousand people. For the first time in the
           series, the setting is fictional as the team felt that they would have
           more creative freedom regarding the game's world design. The
@@ -51,8 +38,8 @@
           introduction of "the Ghost Experience". The Ghost Experience allows
           players the option to disable some game mechanics, such as the gear
           score, and independently alter others.
-        </p>
-      </div>
+            </p>
+        </div>
     </div>
-  </body>
-</html>
+</asp:Content>
+
