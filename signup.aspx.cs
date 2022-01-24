@@ -15,7 +15,7 @@ public partial class signup : System.Web.UI.Page
 {
 
 
-    public string fn = "", ln = "", un = "", msg2 = "", by = "", msg1 = "";
+    public string fn = "", ln = "", un = "", msg2 = "", by = "", msg1 = "", pass = "";
     protected void Page_Load(object sender, EventArgs e)
     {
         string sqlS = "";
@@ -30,6 +30,10 @@ public partial class signup : System.Web.UI.Page
             ln = Request.Form["lastname"];
             fn = Request.Form["fname"];
             by = Request.Form["birthyear"];
+            pass = Request.Form["password"];
+
+
+            int bm = int.Parse(Request.Form["birthmonth"]);
 
 
             int bYear = int.Parse(by);
@@ -37,7 +41,7 @@ public partial class signup : System.Web.UI.Page
             string selectQuery = "SELECT * FROM myData WHERE UserName = '" + un + "'";
             if (!MyAdoHelper.IsExist(fileName, selectQuery))
             {
-                sqlS = "INSERT INTO myData VALUES ('" + un + "','" + fn + "','" + ln + "'," + bYear + ")";
+                sqlS = "INSERT INTO myData VALUES ('" + un + "'," + bYear + ",'" + fn + "','" + ln + "','" + pass + "'," + bm + ")";
 
                 MyAdoHelper.DoQuery(fileName, sqlS);
             }

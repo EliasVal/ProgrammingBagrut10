@@ -9,6 +9,8 @@
             if (!(bdikalastname())) allcheck = false;
             if (!(bdikauname())) allcheck = false;
             if (!(bdikabyear())) allcheck = false;
+            if (!(bdikamonth())) allcheck = false;
+            if (!(bdikapass())) allcheck = false;
             return allcheck;
         }
         function bdikafirstname() {
@@ -53,6 +55,20 @@
             return flag;
         }
 
+        function bdikapass() {
+            flag = true;
+            var n = document.getElementById("password").value;
+            if (n == "") {
+                document.getElementById("mpassword").value = "חובה ססמא ";
+                document.getElementById("mpassword").style.display = "inline";
+                flag = false;
+            }
+            else {
+                document.getElementById("mpassword").style.display = "none";
+            }
+            return flag;
+        }
+
         function bdikabyear() {
             flag = true;
 
@@ -70,6 +86,27 @@
                 }
                 else
                     document.getElementById("mbirthyear").style.display = "none";
+
+            return flag;
+        }
+
+        function bdikabmonth() {
+            flag = true;
+
+            var n = document.getElementById("birthmonth").value;
+            if (n == "") {
+                document.getElementById("mbirthmonth").value = "חובה חודש לידהי";
+                document.getElementById("mbirthmonth").style.display = "inline";
+                flag = false;
+            }
+            else
+                if (isNaN(n)) {
+                    document.getElementById("mbirthmonth").value = "חובה חודש לידהי";
+                    document.getElementById("mbirthmonth").style.display = "inline";
+                    flag = false;
+                }
+                else
+                    document.getElementById("mbirthmonth").style.display = "none";
 
             return flag;
         }
@@ -111,6 +148,22 @@
                     <input type="text" id="birthyear" name="birthyear" size="15" value="<%=by %>" /></td>
                 <td>
                     <input type="text" name="mbirthyear" id="mbirthyear" style="display: none; background-color: Black; font-weight: bold;" disabled="disabled" />
+                </td>
+            </tr>
+            <tr>
+                <td>ססמא</td>
+                <td>
+                    <input type="text" id="password" name="password" size="15" value="<%=pass %>" /></td>
+                <td>
+                    <input type="text" name="mpassword" id="mpassword" style="display: none; background-color: Black; font-weight: bold;" disabled="disabled" />
+                </td>
+            </tr>
+            <tr>
+                <td>לידה חודש</td>
+                <td>
+                    <input type="text" id="birthmonth" name="birthmonth" size="15" value="<%=by %>" /></td>
+                <td>
+                    <input type="text" name="mbirthmonth" id="mbirthmonth" style="display: none; background-color: Black; font-weight: bold;" disabled="disabled" />
                 </td>
             </tr>
 
