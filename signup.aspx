@@ -77,7 +77,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <form id="register" method="post" onsubmit="return bdika()">
+    <form id="register" method="post" runat="server" onsubmit="return bdika()">
         <table>
             <tr>
                 <td>שם פרטי</td>
