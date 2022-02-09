@@ -16,10 +16,11 @@
 <body>
     <nav>
         <ul>
-            <li><a href="/plot">Plot</a></li>
-            <li><a href="/">Home</a></li>
-            <li><a href="/development">Development</a></li>
-            <li><a href="/signup.aspx">Sign-Up</a></li>
+            <li><a id="plot" href="/plot.aspx">Plot</a></li>
+            <li><a id="home" href="/">Home</a></li>
+            <li><a id="development" href="/development.aspx">Development</a></li>
+            <li><a id="signup" href="/signup.aspx">Sign-Up</a></li>
+            <li><a id="admin" href="/admin.aspx">Admin</a></li>
         </ul>
     </nav>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

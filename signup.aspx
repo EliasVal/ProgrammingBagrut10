@@ -6,12 +6,23 @@
 
             var allcheck = true;
             if (!(bdikafirstname())) allcheck = false;
+            console.log(allcheck);
             if (!(bdikalastname())) allcheck = false;
+            console.log(allcheck);
+
             if (!(bdikauname())) allcheck = false;
+            console.log(allcheck);
+
             if (!(bdikabyear())) allcheck = false;
+            console.log(allcheck);
+
             if (!(bdikamonth())) allcheck = false;
+            console.log(allcheck);
+
             if (!(bdikapass())) allcheck = false;
-            return allcheck;
+            console.log(allcheck);
+
+            return false;
         }
         function bdikafirstname() {
             flag = true;
@@ -90,7 +101,7 @@
             return flag;
         }
 
-        function bdikabmonth() {
+        function bdikamonth() {
             flag = true;
 
             var n = document.getElementById("birthmonth").value;
@@ -114,7 +125,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <form id="register" method="post" runat="server" onsubmit="return bdika()">
+    <form id="register" method="post" onsubmit="return bdika()">
         <table>
             <tr>
                 <td>שם פרטי</td>

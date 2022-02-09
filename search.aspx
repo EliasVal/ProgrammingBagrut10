@@ -5,10 +5,10 @@
         function checkForm() {
 
             var flag = true;
-            flag = checkPass();
+            flag = checkUsername();
             return flag;
         }
-        function checkPass() {
+        function checkUsername() {
             var flag = true;
             var n = document.getElementById("userName").value;
             if (n == "") {

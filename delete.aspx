@@ -1,6 +1,28 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="delete.aspx.cs" Inherits="delete" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <script type="text/javascript">
+        function checkForm() {
+            var flag = true;
+            flag = checkUsername();
+            return flag;
+        }
+        function checkUsername() {
+            var flag = true;
+            var n = document.getElementById("userName").value;
+            if (n == "") {
+                document.getElementById("muserName").value = "Username required";
+                document.getElementById("muserName").style.display = "inline";
+                flag = false;
+            }
+            else {
+                document.getElementById("muserName").style.display = "none";
+
+            }
+            return flag;
+
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <form id="del" method="post" onsubmit="return checkForm();">
