@@ -21,19 +21,24 @@
             <li><a id="development" href="/development.aspx">Development</a></li>
 
 
-            <% if (Session["name"] == "Guest")
-                { %>
+            <% if (Session["name"].ToString() == "Guest")
+            { %>
                 <li><a id="signup" href="/signup.aspx">Sign-Up</a></li>
                 <li><a id="login" href="/login.aspx">Log-In</a></li>
-            <%} %>
-
-            <% if (Session["name"] == "admin")
-                { %>
+            <%}
+            else if (Session["name"].ToString() == "admin")
+            { %>
                 <li><a id="admin" href="/admin.aspx">Admin</a></li>
+            <% }
+            else
+            { %>
+            <li><a id="signOut" onclick="<% Session["name"] = "Guest"; %>">Sign-Out</a></li>
             <% } %>
 
-            <li><p>Number of entries: <%=counter %></p></li>
+            
         </ul>
+        <br />
+        <p style="color: white; text-align: center;">Number of entries: <%=counter %></p>
     </nav>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>

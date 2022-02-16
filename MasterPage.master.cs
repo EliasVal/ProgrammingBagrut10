@@ -15,6 +15,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
             Application["count"] = 0;
         }
 
+        if (Session["name"] == null || Session["name"].ToString() == "")
+        {
+            Session["name"] = "Guest";
+        }
+
         counter = Application["count"].ToString();
     }
 }
