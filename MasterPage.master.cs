@@ -7,8 +7,14 @@ using System.Web.UI.WebControls;
 
 public partial class MasterPage : System.Web.UI.MasterPage
 {
+    public string counter;
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Application["count"] == null)
+        {
+            Application["count"] = 0;
+        }
 
+        counter = Application["count"].ToString();
     }
 }

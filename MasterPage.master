@@ -19,8 +19,20 @@
             <li><a id="plot" href="/plot.aspx">Plot</a></li>
             <li><a id="home" href="/">Home</a></li>
             <li><a id="development" href="/development.aspx">Development</a></li>
-            <li><a id="signup" href="/signup.aspx">Sign-Up</a></li>
-            <li><a id="admin" href="/admin.aspx">Admin</a></li>
+
+
+            <% if (Session["name"] == "Guest")
+                { %>
+                <li><a id="signup" href="/signup.aspx">Sign-Up</a></li>
+                <li><a id="login" href="/login.aspx">Log-In</a></li>
+            <%} %>
+
+            <% if (Session["name"] == "admin")
+                { %>
+                <li><a id="admin" href="/admin.aspx">Admin</a></li>
+            <% } %>
+
+            <li><p>Number of entries: <%=counter %></p></li>
         </ul>
     </nav>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
