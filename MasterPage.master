@@ -32,7 +32,7 @@
             <% }
             else
             { %>
-            <li><a id="signOut" onclick="<% Session["name"] = "Guest"; %>">Sign-Out</a></li>
+            <li><a id="signOut" href="Logout.aspx">Sign-Out</a></li>
             <% } %>
 
             
