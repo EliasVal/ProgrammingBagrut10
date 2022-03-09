@@ -1,6 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="delete.aspx.cs" Inherits="delete" %>
+﻿<%@ Page Title="Delete" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="delete.aspx.cs" Inherits="delete" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <title>Delete</title>
     <script type="text/javascript">
         function checkForm() {
             var flag = true;
@@ -25,20 +26,29 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <form id="del" method="post" onsubmit="return checkForm();">
-        <table>
-            <tr>
-                <td>שם משתמש:</td>
-                <td>
-                    <input type="text" id="userName" name="userName" /></td>
-                <td>
-                    <input type="text" name="muserName" id="muserName" style="display: none; background-color: cornflowerblue; font-weight: bold;"
-                        disabled="disabled" /></td>
-            </tr>
-        </table>
+    <div>
+        <div style="height: 100%; border: 1px solid gray; border-radius: 0.25rem;">
+            <form id="del" method="post" onsubmit="return checkForm();">
+                <table>
+                    <tr>
+                        <td>Username:</td>
+                        <td>
+                            <input type="text" id="userName" name="userName" /></td>
+                        <td>
+                            <input type="text" name="muserName" id="muserName" style="display: none; background-color: cornflowerblue; font-weight: bold;"
+                                disabled="disabled" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" id="sub" name="sub" value="Delete" />
 
-        <input type="submit" name="delete" value="מחיקהן" />
-    </form>
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+        </div>
+    </div>
 
 </asp:Content>
 

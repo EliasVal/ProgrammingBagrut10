@@ -1,6 +1,7 @@
-﻿<%@ Page Title="Ghost Recon: Breakpoint | Development" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="development.aspx.cs" Inherits="development" %>
+﻿<%@ Page Title="Development" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="development.aspx.cs" Inherits="development" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <title>Development</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div>

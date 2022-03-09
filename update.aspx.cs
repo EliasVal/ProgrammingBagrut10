@@ -9,7 +9,7 @@ public partial class update : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Request.Form["update"] != null)
+        if (Request.Form["sub"] != null)
         {
             string selectQuery;
             string sql;

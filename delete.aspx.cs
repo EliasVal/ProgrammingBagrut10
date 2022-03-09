@@ -12,7 +12,7 @@ public partial class delete : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (Request.Form["delete"] != null)
+        if (Request.Form["sub"] != null)
         {
             string selectQuery;
             string sql;

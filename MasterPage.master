@@ -2,9 +2,8 @@
 
 <!DOCTYPE html>
 
-<html>
+<html style="background: linear-gradient(#e66465, #9198e5); min-height: 100%">
 <head runat="server">
-    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,27 +18,17 @@
             <li><a id="plot" href="/plot.aspx">Plot</a></li>
             <li><a id="home" href="/">Home</a></li>
             <li><a id="development" href="/development.aspx">Development</a></li>
-
-
-            <% if (Session["name"].ToString() == "Guest")
-            { %>
-                <li><a id="signup" href="/signup.aspx">Sign-Up</a></li>
-                <li><a id="login" href="/login.aspx">Log-In</a></li>
-            <%}
-            else if (Session["name"].ToString() == "admin")
-            { %>
-                <li><a id="admin" href="/admin.aspx">Admin</a></li>
-            <% }
-            else
-            { %>
-            <li><a id="signOut" href="Logout.aspx">Sign-Out</a></li>
-            <% } %>
-
-            
+            <li runat="server" id="signup"><a href="/signup.aspx">Sign-Up</a></li>
+            <li runat="server" id="login"><a href="/login.aspx">Log-In</a></li>
+            <li runat="server" id="admin"><a href="/admin.aspx">Admin</a></li>
+            <li runat="server" id="signOut"><a href="/Logout.aspx">Sign-Out</a></li>
         </ul>
         <br />
         <p style="color: white; text-align: center;">Number of entries: <%=counter %></p>
     </nav>
+    <div id="pageTitle">
+        <h1><%=Page.Title %></h1>
+    </div>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
 </body>

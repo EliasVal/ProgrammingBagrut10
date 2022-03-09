@@ -1,6 +1,7 @@
-﻿<%@ Page Title="Ghost Recon: Breakpoint | Plot" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="plot.aspx.cs" Inherits="plot" %>
+﻿<%@ Page Title="Plot" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="plot.aspx.cs" Inherits="plot" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <title>Plot</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div>

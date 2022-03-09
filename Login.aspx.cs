@@ -7,7 +7,6 @@ using System.Web.UI.WebControls;
 
 public partial class Login : System.Web.UI.Page
 {
-
     public string status;
     protected void Page_Load(object sender, EventArgs e)
     {
